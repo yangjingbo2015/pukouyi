@@ -99,6 +99,25 @@ git commit -m "del haha.log"
 如何你只希望删除仓库，但是保留本地，可以先将该文件重命名，然后git rm，然后将该文件再改为原名加入.gitignore列表！
 
 重命名仓库/本地文件
+先改本地文件名
+执行一次git status看看变化
+然后git add .
+执行一次git status看看变化
+最后git commit -m ""
+
+比较暂存区和工作区
+git diff GitReadme.txt
+
+比较暂存区和仓库区
+
+
+比较工作区和仓库区
+
+====================================
+
+
+
+
 
 
 
