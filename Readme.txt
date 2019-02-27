@@ -74,16 +74,22 @@ git rm --cache -r src                                // 移除一个目录（包
 注册个人信息
 1、所有仓库的（全局）
     当前仓库如果没有指定个人信息，就用全局的
+    git config --global user.email "you@example.com"
+    git config --global user.name "Your Name"
 
 2、当前仓库的（个人）
     当前仓库如果指定个人信息，就用个人的
-
-
-
-
+    git config user.name "tom"
+    git config user.email "tom@123.com"
 
 提交到仓库
 git commit Readme.txt
+git commit hello.txt haha.log -m "add hello.txt and haha.log files"
+git commit -m "add src/"    // 不写文件列表，就表明将当前暂存区中的所有内容都被提交到仓库区
+
+查看日志
+git log
+
 
 
 
