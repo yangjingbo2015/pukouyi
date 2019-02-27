@@ -89,7 +89,19 @@ git commit -m "add src/"    // 不写文件列表，就表明将当前暂存区�
 
 查看日志
 git log
-git log --author=frank
+git log --author=frank      // 查找user.name和user.email包含frank的提交信息
+git log --pretty=oneline    // 单行显示提交信息
+
+删除仓库中的文件（本地也同时删除）
+git rm haha.log
+git commit -m "del haha.log"
+
+如何你只希望删除仓库，但是保留本地，可以先将该文件重命名，然后git rm，然后将该文件再改为原名加入.gitignore列表！
+
+重命名仓库/本地文件
+
+
+
 
 
 
