@@ -89,7 +89,7 @@ git commit -m "add src/"    // 不写文件列表，就表明将当前暂存区�
 
 查看日志
 git log
-
+git log --author=frank
 
 
 
