@@ -109,14 +109,15 @@ git commit -m "del haha.log"
 git diff GitReadme.txt
 
 比较暂存区和仓库区
-
+git diff --cached GitReadme.txt
 
 比较工作区和仓库区
+
 
 ====================================
 
 
-
+something funny
 
 
 
