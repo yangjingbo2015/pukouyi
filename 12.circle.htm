@@ -1,0 +1,66 @@
+<style>
+    #c {
+        margin: auto;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+    }
+</style>
+
+<canvas id="c" width="400" height="400"></canvas>
+
+<script>
+    let c = document.querySelector("#c");
+    let width = c.width;
+    let height = c.height;
+
+    let ctx = c.getContext("2d");
+
+    let x = width / 2;
+    let y = height / 2;
+    let r = 100;
+
+    let start = 270;
+
+    ctx.lineWidth = 30;
+
+    ctx.arc(x, y, r, 0, Math.PI * 2);
+
+    ctx.strokeStyle = "lightgray";
+    ctx.stroke();
+
+    ctx.font = "40px Times New Roman";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+
+    let progress = 0;
+
+    let handle = setInterval(function() {
+        progress += 10;
+
+        ctx.clearRect(0, 0, width, height);
+
+        ctx.strokeStyle = "lightgray";
+        ctx.beginPath();
+        ctx.arc(x, y, r, 0, Math.PI * 2);
+        ctx.stroke();
+
+        ctx.strokeStyle = "orange";
+        ctx.beginPath();
+        ctx.arc(x, y, r, degree2radian(start), degree2radian(start + 360 * (progress / 100)));
+        ctx.stroke();
+
+        ctx.fillText(`${progress}%`, x, y);
+
+        if (progress == 100)
+            clearInterval(handle);
+    }, 500);
+    
+    function degree2radian(degree) {
+        return degree * Math.PI / 180;
+    }
+
+</script>
+
